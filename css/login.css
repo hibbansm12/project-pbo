@@ -1,0 +1,219 @@
+/**
+ * CSS RESET
+ *
+ * @format
+ */
+
+*
+  /* 1. Use a more-intuitive box-sizing model. */
+*/
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+	font-family: inter;
+	margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/*  */
+/*  */
+/* MAIN CSS */
+/*  */
+/*  */
+
+/* TOP and BOTTOM BAR */
+
+.top {
+	width: 100%;
+	height: 10vh;
+	background-color: rgba(0, 133, 250, 1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.bottom {
+	width: 100%;
+	height: 10vh;
+	background-color: rgba(0, 133, 250, 1);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/* MAIN CONTENT */
+.content-container {
+	margin: 10vh auto;
+	width: 100%;
+	height: 80vh;
+	position: absolute;
+	/* background-color: green; */
+}
+
+.form-wrapper {
+	width: 20rem;
+	margin: 18vh auto;
+	padding: 1rem 2rem;
+	position: relative;
+	border-radius: 12px;
+	box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.193);
+}
+
+.login-wrapper {
+	max-width: 100%;
+}
+
+form h2 {
+	text-align: center;
+	margin-bottom: 0.8rem;
+}
+
+form {
+	position: relative;
+	max-width: inherit;
+}
+
+.login-wrapper form input[placeholder] {
+	width: 100%;
+	margin: 0 auto 1rem;
+	padding: 0.7rem 1rem;
+	box-sizing: border-box;
+	background-color: rgb(235, 235, 235);
+	font-size: 0.9rem;
+	border: none;
+	border-radius: 0.4rem;
+	accent-color: rgb(0, 133, 250);
+	/* overflow: hidden; */
+}
+
+.login-wrapper form input[placeholder]:focus {
+	outline-color: rgb(0, 133, 250);
+}
+
+/* CHOICE SECTION */
+
+form .choice-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.9rem;
+}
+
+form .checkbox-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+form .checkbox-wrapper input[type="checkbox"] {
+	width: 0.9rem;
+	height: 0.9rem;
+	accent-color: rgb(0, 133, 250);
+	cursor: pointer;
+}
+
+form .checkbox-wrapper label {
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+
+form .choice-wrapper .forgot-pass {
+	font-size: 0.9rem;
+	text-decoration: none;
+	color: rgb(4, 115, 212);
+}
+
+form .choice-wrapper .forgot-pass:hover {
+	color: rgb(10, 84, 148);
+}
+
+.login-wrapper .sign-up {
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+/* BUTTON */
+
+form button {
+	width: 100%;
+	padding: 0.7rem;
+	margin-bottom: 0.8rem;
+	background-color: rgb(0, 133, 250);
+	border: none;
+	border-radius: 0.4rem;
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: white;
+	cursor: pointer;
+}
+
+form button:hover {
+	background-color: rgb(0, 120, 224);
+}
+
+form button:active {
+	background-color: rgb(4, 101, 185);
+}
+
+/* sign up paragraph */
+
+.login-wrapper .sign-up a {
+	text-decoration: none;
+	color: rgb(4, 115, 212);
+}
+
+.login-wrapper .sign-up a:hover {
+	color: rgb(5, 80, 146);
+}
