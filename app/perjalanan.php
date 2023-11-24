@@ -56,8 +56,10 @@ $harga = 100000 * $kursi;
 		</div>
 		<main class="content-wrapper">
 			<form action="">
+				<main class="content-wrapper">
+			<form action="">
 				<div class="content-name">
-					Filter
+					Pilih Waktu Keberangkatan
 				</div>
 
 				<!-- PENGISIAN FORM -->
@@ -67,20 +69,24 @@ $harga = 100000 * $kursi;
 							<div class="choice-menu">
 								<p class="choice-menu-name">Waktu Keberangkatan</p>
 								<div class="choice-row-wrapper">
-									<label for="choice1">00:00 - 06:00</label>
+									<label for="choice1">07:00</label>
 									<input type="radio" name="choice" id="choice1" value="" />
 								</div>
 								<div class="choice-row-wrapper">
-									<label for="choice2">06:00 - 12:00</label>
+									<label for="choice2">10:00</label>
 									<input type="radio" name="choice" id="choice2" value="" />
 								</div>
 								<div class="choice-row-wrapper">
-									<label for="choice3">12:00 - 18:00</label>
+									<label for="choice3">13:00</label>
 									<input type="radio" name="choice" id="choice3" value="" />
 								</div>
 								<div class="choice-row-wrapper">
-									<label for="choice4">18:00 - 00:00</label>
+									<label for="choice4">16:00</label>
 									<input type="radio" name="choice" id="choice4" value="" />
+								</div>
+								<div class="choice-row-wrapper">
+									<label for="choice5">19:00</label>
+									<input type="radio" name="choice" id="choice5" value="" />
 								</div>
 								<br>
 							</div>
