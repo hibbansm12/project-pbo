@@ -109,7 +109,7 @@ h6 {
 	padding: 1rem 2rem;
 	position: relative;
 	border-radius: 12px;
-	box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.193);
+	box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.193);
 }
 
 .login-wrapper {
@@ -126,7 +126,7 @@ form {
 	max-width: inherit;
 }
 
-.login-wrapper form input[placeholder] {
+.login-wrapper form input[pattern] {
 	width: 100%;
 	margin: 0 auto 1rem;
 	padding: 0.7rem 1rem;
@@ -139,7 +139,7 @@ form {
 	/* overflow: hidden; */
 }
 
-.login-wrapper form input[placeholder]:focus {
+.login-wrapper form input[pattern]:focus {
 	outline-color: rgb(0, 133, 250);
 }
 

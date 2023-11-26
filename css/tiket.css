@@ -159,15 +159,15 @@ body {
 }
 
 .container .main-content-box .left-section .row-three .harga-tiket-wrapper {
-	margin-top: -2rem;
-	font-size: 2.2rem;
+	margin-top: -0.5rem;
+	font-size: 2.3rem;
 	font-weight: bold;
 	align-self: center;
 }
 
 .container .main-content-box .left-section .row-three .harga-tiket-wrapper .rp {
 	font-weight: 600;
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 }
 
 /* middle section */
