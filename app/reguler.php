@@ -4,10 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Fasilitas Kelas Reguler</title>
-	<link rel="stylesheet" href="../css/reguler.css">
+	<link rel="stylesheet" href="/css/reguler.css">
 </head>
 <body>
-	<header class="navbar">
+<header class="navbar">
+		<div class="left-section">
+			<img src="../images/user.png" alt="user-logo" class="user-logo">
+			<div class="user-info">
+				<div class="username">
+					wawan03
+				</div>
+				<div class="tipe-user">
+					Petugas
+				</div>
+			</div>
+		</div>
+		<!-- akhir -->
 		<ul>
 			<li><a href="pesan_tiket.php" class="navbar-menu">pesan tiket</a></li>
 			<li><a href="perjalanan.php" class="navbar-menu">perjalanan</a></li>
@@ -21,6 +33,9 @@
 				</div>
 			</li>
 		</ul>
+		<div class="right-section">
+			<a href="login.php" class="logout"><span>Logout</span></a>
+		</div>
 	</header>
 	<main class="content">
 		<p class="content-title">fasilitas kelas armada kelas reguler</p>

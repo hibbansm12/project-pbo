@@ -1,4 +1,5 @@
 <!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -8,7 +9,7 @@
 			href="https://fonts.googleapis.com/css?family=Inter&display=swap"
 			rel="stylesheet"
 		/>
-		<link href="../css/login.css" rel="stylesheet" />
+		<link href="/css/login.css" rel="stylesheet" />
 		<title>Halaman Login</title>
 	</head>
 	<body>
@@ -17,20 +18,20 @@
 			<main class="content-container">
 				<div class="form-wrapper">
 					<div class="login-wrapper">
-						<form action="verifikasi_login.php" method="post">
+						<form action="">
 							<h2>Sign In</h2>
-							<input type="text" placeholder="Username" name="username" required>
-							<input type="password" placeholder="Password" name="password" required>
-							<!-- <div class="choice-wrapper">
+							<input type="text" placeholder="Username" pattern="[A-Za-z0-9\-_\.]{6,20}" required>
+							<input type="password" placeholder="Password" pattern="" required>
+							<div class="choice-wrapper">
 								<div class="checkbox-wrapper">
 									<input type="checkbox" name="remember" id="remember">
 									<label for="remember">Remember Me</label>
 								</div>
 								<a href="#" class="forgot-pass">Forgot password?</a>
-							</div> -->
-							<button type="submit" name="masuk">Masuk</button>
+							</div>
+							<button type="submit">Sign In</button>
 						</form>
-						<!-- <div class="sign-up">Don't have an account?<a href=""> Sign Up</a></div> -->
+						<div class="sign-up">Don't have an account?<a href=""> Sign Up</a></div>
 					</div>
 				</div>
 			</main>

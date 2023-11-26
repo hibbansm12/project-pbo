@@ -1,10 +1,10 @@
 <!-- @format -->
 <?php
-$asal = $_POST['pilih-agen-asal'];
-$tujuan = $_POST['pilih-agen-tujuan'];
-$tanggal = $_POST['tanggal'];
-$kursi = $_POST['jumlah-kursi'];
-$harga = 100000 * $kursi;
+// $asal = $_POST['pilih-agen-asal'];
+// $tujuan = $_POST['pilih-agen-tujuan'];
+// $tanggal = $_POST['tanggal'];
+// $kursi = $_POST['jumlah-kursi'];
+// $harga = 100000 * $kursi;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,23 +16,37 @@ $harga = 100000 * $kursi;
 		<script src="/js/functions.js" defer></script>
 	</head>
 	<body>
+		<!-- diisi database -->
 		<header class="navbar">
-			<ul>
-				<li>
-					<a href="pesan_tiket.php" class="navbar-menu">pesan tiket</a>
-				</li>
-				<li><a href="#" class="navbar-menu">perjalanan</a></li>
-				<li>
-					<div class="dropdown">
-						<button class="dropdown-btn">KELAS ARMADA</button>
-						<div class="dropdown-content">
-							<a href="reguler.php">Reguler</a>
-							<a href="eksekutif.php">Eksekutif</a>
-						</div>
+		<div class="left-section">
+			<img src="../images/user.png" alt="user-logo" class="user-logo">
+			<div class="user-info">
+				<div class="username">
+					wawan03
+				</div>
+				<div class="tipe-user">
+					Petugas
+				</div>
+			</div>
+		</div>
+		<!-- akhir -->
+		<ul>
+			<li><a href="pesan_tiket.php" class="navbar-menu">pesan tiket</a></li>
+			<li><a href="perjalanan.php" class="navbar-menu">perjalanan</a></li>
+			<li>
+				<div class="dropdown">
+					<button class="dropdown-btn">KELAS ARMADA</button>
+					<div class="dropdown-content">
+						<a href="reguler.php">Reguler</a>
+						<a href="eksekutif.php">Eksekutif</a>
 					</div>
-				</li>
-			</ul>
-		</header>
+				</div>
+			</li>
+		</ul>
+		<div class="right-section">
+			<a href="login.php" class="logout"><span>Logout</span></a>
+		</div>
+	</header>
 
 
 
@@ -41,12 +55,13 @@ $harga = 100000 * $kursi;
 			<div class="left-section">
 				<p class="name-bar">Pilih Bus</p>
 				<div class="pemesanan-tiket-info">
-					<div class="titik-keberangkatan"><?php echo $asal;?></div>
+					<div class="titik-keberangkatan">asdsad<?php // echo $asal;?></div>
 					<img src="../images/v9_19.png" alt="">
-					<div class="titik-tiba"><?php echo $tujuan;?></div>
+					<div class="titik-tiba">adasd<?php //echo $tujuan;?></div>
 					<ul>
-						<div class="tanggal-keberangkatan"><li><?php echo $tanggal;?></li></div>
-						<div class="jumlah-kursi"><li><?php echo $kursi;?></li></div>
+						<div class="tanggal-keberangkatan"><li>asdads<?php // echo $tanggal;?></li></div>
+						<div class="jumlah-kursi"><li>asdasd<?php // echo $kursi;?></li></div>
+						<div class="kelas"><li>adsad<?php //echo $kelas;?></li></div>
 					</ul>
 				</div>
 			</div>
@@ -63,7 +78,6 @@ $harga = 100000 * $kursi;
 				</div>
 
 				<!-- PENGISIAN FORM -->
-
 				<div class="content-box">
 						<div class="choice-box">
 							<div class="choice-menu">

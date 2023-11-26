@@ -1,5 +1,5 @@
 <?php
-require_once '../class/rute.php';
+// require_once '../class/rute.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,23 +10,36 @@ require_once '../class/rute.php';
   <link rel="stylesheet" href="../css/pesan_tiket.css">
 </head>
 <body>
-    <header class="navbar">
-			<ul>
-				<li>
-					<a href="#" class="navbar-menu">pesan tiket</a>
-				</li>
-				<li><a href="perjalanan.php" class="navbar-menu">perjalanan</a></li>
-				<li>
-					<div class="dropdown">
-						<button class="dropdown-btn">KELAS ARMADA</button>
-						<div class="dropdown-content">
-							<a href="reguler.php">Reguler</a>
-							<a href="eksekutif.php">Eksekutif</a>
-						</div>
+<header class="navbar">
+		<div class="left-section">
+			<img src="../images/user.png" alt="user-logo" class="user-logo">
+			<div class="user-info">
+				<div class="username">
+					wawan03
+				</div>
+				<div class="tipe-user">
+					Petugas
+				</div>
+			</div>
+		</div>
+		<!-- akhir -->
+		<ul>
+			<li><a href="pesan_tiket.php" class="navbar-menu">pesan tiket</a></li>
+			<li><a href="perjalanan.php" class="navbar-menu">perjalanan</a></li>
+			<li>
+				<div class="dropdown">
+					<button class="dropdown-btn">KELAS ARMADA</button>
+					<div class="dropdown-content">
+						<a href="reguler.php">Reguler</a>
+						<a href="eksekutif.php">Eksekutif</a>
 					</div>
-				</li>
-			</ul>
-		</header>
+				</div>
+			</li>
+		</ul>
+		<div class="right-section">
+			<a href="login.php" class="logout"><span>Logout</span></a>
+		</div>
+	</header>
     <main class="content">
       <div class="content-box-title">
         <img src="../images/Ticket.png" alt="logo tiket">
@@ -61,7 +74,7 @@ require_once '../class/rute.php';
 					<div class="content-box-main-card bottom">
 					<img src="../images/Calendar.png" alt="">
 						<div class="card-info">
-							<label class="card-info-titl e">Pergi</label>
+							<label class="card-info-title">Pergi</label>
 							<p class="input-wrapper">
 								<input type="date" name="tanggal" id="tanggal" class="date-choice" required>
 							</p>
