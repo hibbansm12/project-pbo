@@ -1,6 +1,3 @@
-<?php
-require_once '../class/rute.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,7 +58,7 @@ require_once '../class/rute.php';
 					<div class="content-box-main-card bottom">
 					<img src="../images/Calendar.png" alt="">
 						<div class="card-info">
-							<label class="card-info-titl e">Pergi</label>
+							<label class="card-info-titl e">Tanggal Pergi</label>
 							<p class="input-wrapper">
 								<input type="date" name="tanggal" id="tanggal" class="date-choice" required>
 							</p>
@@ -83,8 +80,8 @@ require_once '../class/rute.php';
 						<div class="card-info">
 							<label class="card-info-title" for="kelas-bus">Kelas</label>
 							<select name="kelas-bus" id="kelas-bus" required>
-								<option value="reguler">Reguler</option>
-								<option value="eksekutif">Eksekutif</option>
+								<option value="Reguler">Reguler</option>
+								<option value="Eksekutif">Eksekutif</option>
 							</select>
 						</div>
 					</div>

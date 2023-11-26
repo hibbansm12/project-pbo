@@ -1,31 +1,27 @@
 <?php
 require_once 'database.php';
 class Karyawan extends Database{
-  public function tampilKaryawan(){
-    $sql = "SELECT * FROM karyawan";
-    $data = mysqli_query($this->koneksi, $sql);
-    $rows = mysqli_fetch_all($data, MYSQLI_ASSOC);
-    return $rows;
-  }
   public function login($user, $pw){
-    $sql = "SELECT nama, jabatan FROM karyawan WHERE user='$user' AND pw='$pw'";
-    $data = mysqli_query($this->koneksi, $sql);
-    $jumlah = mysqli_num_rows($data);
-    $rows = mysqli_fetch_all($data, MYSQLI_ASSOC);
-    if( $jumlah > 0){
-      header("Location: dashboard.php");
-      return $rows;
+    $sql = "SELECT * FROM karyawan WHERE user='$user' AND pw='$pw'";
+    $query = mysqli_query($this->koneksi, $sql);
+    $data = mysqli_fetch_assoc($query);
+    if($data){
+      $nama = $data['nama'];
+      $jabatan = $data['jabatan'];
+
+      session_start();
+      $_SESSION['nama'] = $nama;
+      $_SESSION['jabatan'] = $jabatan;
+      if($jabatan == "Admin"){
+        header("Location: dashboard.php");
+      }else if($jabatan == "Petugas"){
+        header("Location: pesan_tiket.php");
+      }
+    }else{
+      // pesan salah
+      $pesan = "Username atau Password Salah";
+      echo "<script type='text/javascript'>alert('$pesan');window.history.back()</script>";
     }
-    // if($jumlah > 0){
-    //   session_start();
-    //   $_SESSION['user'] = $user;
-    //   header('Location: dashboard.php');
-    // } else{
-    //   // pesan salah
-    //   $pesan = "Username atau Password Salah";
-    //   echo "<script type='text/javascript'>alert('$pesan'); ";
-    //   // window.history.back()</script>
-    // }
   }
   public function logout() {
     // memulai session

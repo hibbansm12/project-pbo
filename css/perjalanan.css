@@ -229,7 +229,8 @@ body {
 }
 
 .pemesanan-tiket-info .tanggal-keberangkatan,
-.pemesanan-tiket-info .jumlah-kursi {
+.pemesanan-tiket-info .kelas,
+.pemesanan-tiket-info .jumlah-kursi{
 	font-size: 1rem;
 	color: rgb(100, 100, 100);
 }

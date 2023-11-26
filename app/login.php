@@ -17,10 +17,10 @@
 			<main class="content-container">
 				<div class="form-wrapper">
 					<div class="login-wrapper">
-						<form action="verifikasi_login.php" method="post">
+						<form action="verifikasi_login.php?action=login" method="post">
 							<h2>Sign In</h2>
-							<input type="text" placeholder="Username" name="username" required>
-							<input type="password" placeholder="Password" name="password" required>
+							<input type="text" placeholder="Username" name="user" required>
+							<input type="password" placeholder="Password" name="pw" required>
 							<!-- <div class="choice-wrapper">
 								<div class="checkbox-wrapper">
 									<input type="checkbox" name="remember" id="remember">
@@ -28,7 +28,7 @@
 								</div>
 								<a href="#" class="forgot-pass">Forgot password?</a>
 							</div> -->
-							<button type="submit" name="masuk">Masuk</button>
+							<button type="submit" value="Login">Masuk</button>
 						</form>
 						<!-- <div class="sign-up">Don't have an account?<a href=""> Sign Up</a></div> -->
 					</div>

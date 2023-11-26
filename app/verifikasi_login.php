@@ -1,9 +1,15 @@
 <?php
-require_once '../class/karyawan.php';
-
-$user = $_POST['username'];
-$pw = $_POST['password'];
-
+include "../class/karyawan.php";
 $karya1 = new Karyawan();
-$k1 = $karya1->login($user, $pw);
+
+$action = $_GET['action'];
+
+if($action=="login"){
+    $user = $_POST['user'];
+    $pw = $_POST['pw'];
+    $karya1->login($user, $pw);
+}
+if($action=="logout"){
+    $karya1->logout();
+}
 ?>

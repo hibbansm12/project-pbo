@@ -1,10 +1,14 @@
 <!-- @format -->
 <?php
+require_once '../class/rute.php';
+$h1 = new Rute();
+
 $asal = $_POST['pilih-agen-asal'];
 $tujuan = $_POST['pilih-agen-tujuan'];
 $tanggal = $_POST['tanggal'];
 $kursi = $_POST['jumlah-kursi'];
-$harga = 100000 * $kursi;
+$kelas = $_POST['kelas-bus'];
+$harga = $h1->detailHarga($asal, $tujuan, $kelas) * $kursi;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +50,8 @@ $harga = 100000 * $kursi;
 					<div class="titik-tiba"><?php echo $tujuan;?></div>
 					<ul>
 						<div class="tanggal-keberangkatan"><li><?php echo $tanggal;?></li></div>
-						<div class="jumlah-kursi"><li><?php echo $kursi;?></li></div>
+						<div class="kelas"><li><?php echo $kelas;?></li></div>
+						<div class="jumlah-kursi"><li><?php echo $kursi." Kursi";?></li></div>
 					</ul>
 				</div>
 			</div>
@@ -55,9 +60,9 @@ $harga = 100000 * $kursi;
 			</div>
 		</div>
 		<main class="content-wrapper">
-			<form action="">
+			<form action="booking.php" method="post">
 				<div class="content-name">
-					Filter
+					Pilih Waktu Keberangkatan
 				</div>
 
 				<!-- PENGISIAN FORM -->
@@ -67,20 +72,24 @@ $harga = 100000 * $kursi;
 							<div class="choice-menu">
 								<p class="choice-menu-name">Waktu Keberangkatan</p>
 								<div class="choice-row-wrapper">
-									<label for="choice1">00:00 - 06:00</label>
-									<input type="radio" name="choice" id="choice1" value="" />
+									<label for="choice1">07:00</label>
+									<input type="radio" name="choice" id="choice1" value="07:00" required/>
 								</div>
 								<div class="choice-row-wrapper">
-									<label for="choice2">06:00 - 12:00</label>
-									<input type="radio" name="choice" id="choice2" value="" />
+									<label for="choice2">10:00</label>
+									<input type="radio" name="choice" id="choice2" value="10:00" />
 								</div>
 								<div class="choice-row-wrapper">
-									<label for="choice3">12:00 - 18:00</label>
-									<input type="radio" name="choice" id="choice3" value="" />
+									<label for="choice3">13:00</label>
+									<input type="radio" name="choice" id="choice3" value="13:00" />
 								</div>
 								<div class="choice-row-wrapper">
-									<label for="choice4">18:00 - 00:00</label>
-									<input type="radio" name="choice" id="choice4" value="" />
+									<label for="choice4">16:00</label>
+									<input type="radio" name="choice" id="choice4" value="16:00" />
+								</div>
+								<div class="choice-row-wrapper">
+									<label for="choice4">19:00</label>
+									<input type="radio" name="choice" id="choice5" value="19:00" />
 								</div>
 								<br>
 							</div>

@@ -1,12 +1,13 @@
 <?php
 require_once '../class/rute.php';
-require_once 'verifikasi_login.php';
+require_once '../class/karyawan.php';
 
 $data = new Rute();
 $data->tampilRute();
 
-$nama = $k1['nama'];
-$jabatan = $k1['jabatan'];
+session_start();
+$nama = $_SESSION['nama'];
+$jabatan = $_SESSION['jabatan'];
 ?>
 
 <!DOCTYPE html>
@@ -21,10 +22,10 @@ $jabatan = $k1['jabatan'];
   <header class="navbar-wrapper">
     <nav class="navbar-content">
       <div class="left-section">
-        <p><?php echo $nama ?></p>
-        <p><?php echo $jabatan ?></p></div>
+        <p><?php echo $nama; ?></p>
+        <p><?php echo $jabatan; ?></p></div>
       <div class="right-section">
-        <a href="#">Log Out</a>
+        <a href="verifikasi_login.php?action=logout">Log Out</a>
       </div>
     </nav>
   </header>
@@ -50,14 +51,14 @@ $jabatan = $k1['jabatan'];
         <td><?php echo $bus['tujuan'] ?></td>
         <td><?php echo $bus['kelas'] ?></td>
         <td><?php echo $bus['harga']?></td>
-        <td><a href="action.php/action=edit" class="edit">edit</a></td>
-        <td><a href="action.php/action=hapus" class="hapus">hapus</a></td>
+        <td><a href="edit.php?id=<?php echo $bus['id']?>" class="edit">edit</a></td>
+        <td><a href="action.php?action=hapus&id=<?php echo $bus['id']?>" onclick="return confirm('Apakah Anda yakin ingin mengapus rute ini?')" class="hapus">hapus</a></td>
         <?php }; ?>
       </tr>
     </table>
     <!-- akhir diisi php -->
     <br>
-    <a href="#">Tambah Data</a>
+    <a href="tambah.php">Tambah Rute</a>
   </main>
 </body>
 </html>
