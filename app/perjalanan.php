@@ -1,6 +1,12 @@
 <!-- @format -->
 <?php
 require_once '../class/rute.php';
+require_once '../class/karyawan.php';
+
+session_start();
+$nama = $_SESSION['nama'];
+$jabatan = $_SESSION['jabatan'];
+
 $h1 = new Rute();
 
 $asal = $_POST['pilih-agen-asal'];
@@ -9,6 +15,10 @@ $tanggal = $_POST['tanggal'];
 $kursi = $_POST['jumlah-kursi'];
 $kelas = $_POST['kelas-bus'];
 $harga = $h1->detailHarga($asal, $tujuan, $kelas) * $kursi;
+
+$bus = $h1->cariBus($asal, $tujuan, $kelas);
+$kode_bus = $bus[0];
+$no_pol = $bus[1];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +31,18 @@ $harga = $h1->detailHarga($asal, $tujuan, $kelas) * $kursi;
 	</head>
 	<body>
 		<header class="navbar">
+			<div class="left-section">
+				<img src="../images/user.png" alt="user-logo" class="user-logo">
+				<div class="user-info">
+					<div class="username">
+					<?php echo $nama; ?>
+					</div>
+					<div class="tipe-user">
+					<?php echo $jabatan; ?>
+					</div>
+				</div>
+			</div>
+			<!-- akhir -->
 			<ul>
 				<li>
 					<a href="pesan_tiket.php" class="navbar-menu">pesan tiket</a>
@@ -36,6 +58,9 @@ $harga = $h1->detailHarga($asal, $tujuan, $kelas) * $kursi;
 					</div>
 				</li>
 			</ul>
+			<div class="right-section">
+				<a href="login.php" class="logout"><span>Logout</span></a>
+			</div>
 		</header>
 
 
@@ -60,7 +85,7 @@ $harga = $h1->detailHarga($asal, $tujuan, $kelas) * $kursi;
 			</div>
 		</div>
 		<main class="content-wrapper">
-			<form action="booking.php" method="post">
+			<form action="booking.php?kode_bus=<?=$kode_bus?>&no_pol=<?=$no_pol?>&asal=<?=$asal?>&tujuan=<?=$tujuan?>&tanggal=<?=$tanggal?>&harga=<?=$harga?>" method="post">
 				<div class="content-name">
 					Pilih Waktu Keberangkatan
 				</div>
@@ -77,19 +102,19 @@ $harga = $h1->detailHarga($asal, $tujuan, $kelas) * $kursi;
 								</div>
 								<div class="choice-row-wrapper">
 									<label for="choice2">10:00</label>
-									<input type="radio" name="choice" id="choice2" value="10:00" />
+									<input type="radio" name="choice" id="choice2" value="10:00:00" />
 								</div>
 								<div class="choice-row-wrapper">
 									<label for="choice3">13:00</label>
-									<input type="radio" name="choice" id="choice3" value="13:00" />
+									<input type="radio" name="choice" id="choice3" value="13:00:00" />
 								</div>
 								<div class="choice-row-wrapper">
 									<label for="choice4">16:00</label>
-									<input type="radio" name="choice" id="choice4" value="16:00" />
+									<input type="radio" name="choice" id="choice4" value="16:00:00" />
 								</div>
 								<div class="choice-row-wrapper">
 									<label for="choice4">19:00</label>
-									<input type="radio" name="choice" id="choice5" value="19:00" />
+									<input type="radio" name="choice" id="choice5" value="19:00:00" />
 								</div>
 								<br>
 							</div>

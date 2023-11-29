@@ -91,18 +91,60 @@ body {
 }
 
 /* header navigation */
+.navbar {
+	display: grid;
+	grid-template-columns: 10% 80% 10%;
+	width: 100%;
+	height: 10vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(100, 94, 94, 0.4399999976158142);
+	z-index: 999;
+	padding: 0;
+}
+
+/* NAVBAR LEFT SECTION */
+.navbar .left-section {
+	display: flex;
+	align-items: center;
+	font-family: "Inter", sans-serif;
+}
+
+.navbar .left-section .user-logo {
+	width: 50px;
+	margin-left: 0.6rem;
+}
+
+.navbar .user-info {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 0 0 0.5rem;
+	height: 100%;
+	color: white;
+	font-size: 0.9rem;
+	font-family: "Inter", sans-serif;
+}
+
+.navbar .username {
+	font-size: 1.2rem;
+	font-family: "Inter", sans-serif;
+}
+
+.navbar .user-info .username {
+	font-weight: bold;
+}
+
+/* NAVBAR MIDDLE SECTION  */
 .navbar ul {
+	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 7.5rem;
-	width: 100%;
-	height: 10vh;
-	position: fixed;
-	background: rgba(100, 94, 94, 0.4399999976158142);
 	list-style-type: none;
-	padding: 0;
-	z-index: 999;
 }
 
 .navbar ul li .navbar-menu {
@@ -128,7 +170,7 @@ body {
 .navbar ul li .dropdown .dropdown-btn {
 	background-color: inherit;
 	box-sizing: border-box;
-	margin: 0;
+	margin-top: -2.5px;
 	padding: 2.1rem 0;
 	font-size: 1.25rem;
 	font-weight: 600;
@@ -147,7 +189,7 @@ body {
 	position: absolute;
 	top: 0.8rem;
 	background-color: white;
-	top: 4.2rem;
+	top: 4rem;
 	/* left: 1.5rem; */
 	min-width: 10rem;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -173,6 +215,36 @@ body {
 	display: block;
 }
 
+/* right section */
+.navbar .right-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 1rem;
+}
+
+.navbar .right-section a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: 1.4rem;
+	width: 7rem;
+	height: 3rem;
+	background-color: rgba(246, 69, 10, 0.678);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+}
+
+.navbar .right-section a span {
+	font-family: "Inter", sans-serif;
+}
+
+.navbar .right-section a:hover,
+.navbar .right-section a:focus {
+	opacity: 0.8;
+}
 /* MAIN CONTENT */
 
 .content {
@@ -228,6 +300,7 @@ body {
 	height: 5rem;
 	background-color: rgb(227, 227, 227);
 	border-radius: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.232);
 }
 
 .content-box-main-card img {
@@ -244,7 +317,7 @@ body {
 
 .content-box-main-card .card-info .card-info-title {
 	font-size: 1.1rem;
-	color: rgb(84, 84, 84);
+	color: rgb(110, 110, 110);
 }
 
 .content-box-main-card .card-info .tiket-choice {
@@ -301,6 +374,12 @@ body {
 	outline: none;
 	border-radius: inherit;
 	cursor: pointer;
+	transition: 0.25s ease-in-out;
+}
+
+.content-box-main-card.button:hover,
+.content-box-main-card.button:focus {
+	opacity: 0.8;
 }
 
 .content-box-main-card.button img {
@@ -313,7 +392,3 @@ body {
 	font-size: 1.5rem;
 	color: white;
 }
-
-
-
-

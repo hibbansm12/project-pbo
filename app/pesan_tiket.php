@@ -1,3 +1,11 @@
+<?php
+require_once '../class/karyawan.php';
+
+session_start();
+$nama = $_SESSION['nama'];
+$jabatan = $_SESSION['jabatan'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,22 +16,36 @@
 </head>
 <body>
     <header class="navbar">
-			<ul>
-				<li>
-					<a href="#" class="navbar-menu">pesan tiket</a>
-				</li>
-				<li><a href="perjalanan.php" class="navbar-menu">perjalanan</a></li>
-				<li>
-					<div class="dropdown">
-						<button class="dropdown-btn">KELAS ARMADA</button>
-						<div class="dropdown-content">
-							<a href="reguler.php">Reguler</a>
-							<a href="eksekutif.php">Eksekutif</a>
-						</div>
+		<div class="left-section">
+			<img src="../images/user.png" alt="user-logo" class="user-logo">
+			<div class="user-info">
+				<div class="username">
+				<?php echo $nama; ?>
+				</div>
+				<div class="tipe-user">
+				<?php echo $jabatan; ?>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				<a href="#" class="navbar-menu">pesan tiket</a>
+			</li>
+			<li><a href="perjalanan.php" class="navbar-menu">perjalanan</a></li>
+			<li>
+				<div class="dropdown">
+					<button class="dropdown-btn">KELAS ARMADA</button>
+					<div class="dropdown-content">
+						<a href="reguler.php">Reguler</a>
+						<a href="eksekutif.php">Eksekutif</a>
 					</div>
-				</li>
-			</ul>
-		</header>
+				</div>
+			</li>
+		</ul>
+		<div class="right-section">
+			<a href="login.php" class="logout"><span>Logout</span></a>
+		</div>
+	</header>
     <main class="content">
       <div class="content-box-title">
         <img src="../images/Ticket.png" alt="logo tiket">
