@@ -23,6 +23,7 @@
 * {
   font-family: "Itim", cursive;
   margin: 0;
+  text-decoration: none;
 }
 /*
    Typographic tweaks!
@@ -71,6 +72,9 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+a {
+  text-decoration: none;
 }
 
 /*  */
@@ -338,6 +342,11 @@ th {
 
 .container table tr td button:last-child {
   background-color: rgb(226, 88, 88);
+}
+.container .edit-btn a,
+.container .hapus-btn a {
+  text-decoration: none; /* menghapus garis bawah pada teks */
+  color: inherit; /* membuat warna teks sama dengan warna button */
 }
 
 .container .button-wrapper button {

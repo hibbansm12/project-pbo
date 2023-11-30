@@ -1,0 +1,195 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Open+Sans:wght@300;400;500&family=Poppins:ital,wght@0,300;0,400;0,800;1,300;1,400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+/**
+  * CSS RESET
+  *
+  * @format
+  */
+
+/*
+   /* 1. Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+   2. Remove default margin
+ */
+* {
+	font-family: "Itim", cursive;
+	margin: 0;
+}
+/*
+   Typographic tweaks!
+   3. Add accessible line-height
+   4. Improve text rendering
+ */
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+   5. Improve media defaults
+ */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+   6. Remove built-in form typography styles
+ */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+   7. Avoid text overflows
+ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/*
+   8. Create a root stacking context
+ */
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/*  */
+/*  */
+/* MAIN CSS */
+/*  */
+/*  */
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url("../images/v9_3.png") no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.edit-form-wrapper {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 999;
+	width: 28rem;
+	height: 34rem;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.298);
+}
+
+.edit-form-wrapper form {
+	padding: 1.3rem;
+	display: grid;
+}
+
+.edit-form-wrapper form .title {
+	font-family: "Inter", sans-serif;
+	font-size: 2.2rem;
+	text-align: center;
+	color: rgb(50, 50, 50);
+}
+
+.edit-form-wrapper .group-input-wrapper {
+	margin-top: 0.5rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.edit-form-wrapper .group-input-wrapper .input-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+
+.group-input-wrapper .input-wrapper label {
+	font-family: "Inter", sans-serif;
+	font-size: 1.1rem;
+	color: rgb(50, 50, 50);
+}
+
+.group-input-wrapper .input-wrapper input {
+	font-size: 1.1rem;
+	padding: 0.5rem 0.7rem;
+	border: 1px solid rgba(9, 47, 78, 0.759);
+	border-radius: 10px;
+	color: rgb(50, 50, 50);
+}
+
+.group-input-wrapper .input-wrapper input::placeholder {
+	color: rgb(156, 156, 156);
+}
+
+.group-input-wrapper .input-wrapper input:hover,
+.group-input-wrapper .input-wrapper input:focus {
+	outline-color: rgba(19, 109, 182, 0.975);
+}
+
+.edit-form-wrapper .group-btn-wrapper,
+.add-form-wrapper .group-btn-wrapper {
+	margin-top: 1.8rem;
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+}
+
+.edit-form-wrapper .group-btn-wrapper button,
+.add-form-wrapper .group-btn-wrapper button {
+	width: 5.8rem;
+	height: 2.7rem;
+	font-size: 1.1rem;
+	font-weight: bold;
+	font-family: "Inter", sans-serif;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.315);
+	cursor: pointer;
+	transition: 0.25s ease-in-out;
+}
+
+.edit-form-wrapper .group-btn-wrapper button[type="submit"],
+.add-form-wrapper .group-btn-wrapper button[type="submit"] {
+	background-color: rgb(6, 125, 228);
+	color: white;
+}
+
+.edit-form-wrapper .group-btn-wrapper button[type="button"],
+.add-form-wrapper .group-btn-wrapper button[type="button"] {
+	background-color: rgb(201, 61, 61);
+	color: white;
+}
+
+.edit-form-wrapper .group-btn-wrapper button:hover,
+.edit-form-wrapper .group-btn-wrapper button:focus,
+.add-form-wrapper .group-btn-wrapper button:hover,
+.add-form-wrapper .group-btn-wrapper button:focus {
+	transform: translate(0, 2px);
+	box-shadow: none;
+}

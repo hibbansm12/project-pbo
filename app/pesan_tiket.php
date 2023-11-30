@@ -31,7 +31,7 @@ $jabatan = $_SESSION['jabatan'];
 			<li>
 				<a href="#" class="navbar-menu">pesan tiket</a>
 			</li>
-			<li><a href="perjalanan.php" class="navbar-menu">perjalanan</a></li>
+			<!-- <li><a href="perjalanan.php" class="navbar-menu">perjalanan</a></li> -->
 			<li>
 				<div class="dropdown">
 					<button class="dropdown-btn">KELAS ARMADA</button>

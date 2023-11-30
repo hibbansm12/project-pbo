@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Fasilitas Kelas Eksekutif</title>
 	<link rel="stylesheet" href="../css/eksekutif.css">
 </head>
+
 <body>
 	<header class="navbar">
 		<div class="left-section">
@@ -22,7 +24,6 @@
 		<!-- akhir -->
 		<ul>
 			<li><a href="pesan_tiket.php" class="navbar-menu">pesan tiket</a></li>
-			<li><a href="perjalanan.php" class="navbar-menu">perjalanan</a></li>
 			<li>
 				<div class="dropdown">
 					<button class="dropdown-btn">KELAS ARMADA</button>
@@ -91,4 +92,5 @@
 		</div>
 	</main>
 </body>
+
 </html>
